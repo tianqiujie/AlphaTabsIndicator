@@ -1,3 +1,4 @@
+[![](https://www.jitpack.io/v/tianqiujie/AlphaTabsIndicator.svg)](https://www.jitpack.io/#tianqiujie/AlphaTabsIndicator)
 # AlphaTabsIndicator
 High imitation microblogging at the bottom of the status bar of the lightweight library for most of the bottom status bar application requirements.
 ## Abstract
