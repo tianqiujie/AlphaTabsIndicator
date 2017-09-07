@@ -10,5 +10,6 @@
         <attr name="textColorSelected" format="color" />
         <attr name="badgeBackgroundColor" format="color" />
         <attr name="paddingTexwithIcon" format="dimension"/>
+        <attr name="tabNumberPadingLeft" format="dimension" />
     </declare-styleable>
 </resources>

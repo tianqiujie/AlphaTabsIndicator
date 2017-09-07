@@ -47,6 +47,7 @@ public class AlphaTabView extends View {
     private boolean isShowPoint;                //是否显示圆点
     private int mBadgeNumber;                       //角标数
     private int mBadgeBackgroundColor = 0xFFFF0000;       //默认红颜色
+    private int paddingLeft = 0;//角标距离左边的offset
 
     public AlphaTabView(Context context) {
         this(context, null);
@@ -86,6 +87,7 @@ public class AlphaTabView extends View {
         mTextColorSelected = a.getColor(R.styleable.AlphaTabView_textColorSelected, mTextColorSelected);
         mBadgeBackgroundColor = a.getColor(R.styleable.AlphaTabView_badgeBackgroundColor, mBadgeBackgroundColor);
         mPadding = (int) a.getDimension(R.styleable.AlphaTabView_paddingTexwithIcon, mPadding);
+        paddingLeft = (int)a.getDimension(R.styleable.AlphaTabView_tabNumberPadingLeft, paddingLeft);
         a.recycle();
         initText();
     }
@@ -216,7 +218,7 @@ public class AlphaTabView extends View {
             float x = width / 2f;
             float y = hight / 2f - fontMetrics.descent + (fontMetrics.descent - fontMetrics.ascent) / 2;
             canvasMessages.drawText(number, x, y, numberPaint);
-            float left = getMeasuredWidth() / 10 * 6f;
+            float left = getMeasuredWidth() / 10 * 6f + paddingLeft;
             float top = dp2px(mContext, 5);
             canvas.drawBitmap(bitmap, left, top, null);
             bitmap.recycle();
